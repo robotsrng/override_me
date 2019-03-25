@@ -1,4 +1,4 @@
-require 'rspec'
+# require 'rspec'
 require 'rails_helper'
 require 'support/render_views'
 

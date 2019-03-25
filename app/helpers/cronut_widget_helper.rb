@@ -1,0 +1,2 @@
+module CronutWidgetHelper
+end

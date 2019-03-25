@@ -1,0 +1,15 @@
+<h2>Cronut acceptance widget</h2>
+<div class="challenge_box">
+  <div class="language-choice-links">
+    <%= link_to 'English', url_for(action: :show, controller: 'cronut_widget', locale: 'en'), id: 'js-english-widget-button', class: 'js-language-button', locale: 'en', remote: true   %>
+    <%= link_to 'French', url_for(action: :show, controller: 'cronut_widget', locale: 'fr'), id: 'js-french-widget-button', class: 'js-language-button', locale: 'fr', remote: true   %>
+
+    <%#= button_tag 'French', id: 'js-french-widget-button', class: 'js-language-button', data: {locale: 'fr', url: request.original_url + url_for(action: :show, controller: 'cronut_widget'), remote: true }  %>
+  </div>
+
+  <%= label_tag 'terms_checkbox' do%>
+    <%= (I18n.t('welcome.index.cronuts_label_html', cronuts_url: (params['cronuts_url'] || I18n.t(:cronuts_url)), donuts_url: (params['donuts_url'] || I18n.t(:donuts_url)), locale: locale || I18n.default_locale)).html_safe %>
+  <% end %>
+  <%= check_box_tag 'terms_checkbox' %>
+
+</div>
