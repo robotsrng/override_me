@@ -1,6 +1,6 @@
-A Brand New Cronuts Widget!
+A Brand New Cronuts Widget!<br>
 
-Rebuilt so it's more than just a block on a page!
+Rebuilt so it's more than just a block on a page!<br>
 
 Embed into any with a few lines of code;
 <pre>
@@ -19,13 +19,13 @@ Which becomes;
 </iframe>
 </pre>
 
-How Neat!
-Features;
-*Embed the IFrame anywhere, and change the languages with a click of a link! No nasty page refreshes, no data loss!
-*Default cronuts and donuts are available, but customize your own by simply adding a query string to your link!
-*Safe and secure, no errors when a new language pops up! Can't script in an Iframe!
+How Neat!<br>
+Features;<br>
+*Embed the IFrame anywhere, and change the languages with a click of a link! No nasty page refreshes, no data loss!<br>
+*Default cronuts and donuts are available, but customize your own by simply adding a query string to your link!<br>
+*Safe and secure, no errors when a new language pops up! Can't script in an Iframe!<br>
 
-Coming Soon!
+Coming Soon!<br>
 *Broken link checking
 
 
