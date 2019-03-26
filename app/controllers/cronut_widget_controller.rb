@@ -3,13 +3,14 @@ class CronutWidgetController < ApplicationController
   before_action :set_locale
 
   def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
+    I18n.enforce_available_locales!(params[:locale])
+      I18n.locale = params[:locale] || I18n.default_locale
   end
 
   def show
     @locale = params['locale']
     respond_to do |format|
-      format.html{ render partial: 'show' }
+      format.html {render partial: 'show'}
       format.js
     end
   end

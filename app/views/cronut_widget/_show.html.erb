@@ -40,12 +40,18 @@
   <h2><%= I18n.t('cronuts_heading') %></h2>
   <div class="challenge_box">
     <div class="language-choice-links">
-      <%= link_to 'English', url_for(action: :show, controller: 'cronut_widget', locale: 'en', cronuts_url: params['cronuts_url'], donuts_url: params['donuts_url']), id: 'js-english-widget-button', class: 'js-language-button', remote: true %>
+      <%= link_to 'English', url_for(action: :show, controller: 'cronut_widget', locale: 'en',
+                                     cronuts_url: params['cronuts_url'], donuts_url: params['donuts_url']),
+                  id: 'js-english-widget-button', class: 'js-language-button', remote: true %>
       |
-      <%= link_to 'French', url_for(action: :show, controller: 'cronut_widget', locale: 'fr', cronuts_url: params['cronuts_url'], donuts_url: params['donuts_url']), id: 'js-french-widget-button', class: 'js-language-button', remote: true %>
+      <%= link_to 'French', url_for(action: :show, controller: 'cronut_widget', locale: 'fr',
+                                    cronuts_url: params['cronuts_url'], donuts_url: params['donuts_url']),
+                  id: 'js-french-widget-button', class: 'js-language-button', remote: true %>
     </div>
     <%= label_tag 'terms_checkbox' do %>
-      <%= (I18n.t('cronuts_label_html', cronuts_url: (params['cronuts_url'] || I18n.t('cronuts_url')), donuts_url: (params['donuts_url'] || I18n.t('donuts_url')), locale: locale || I18n.default_locale)).html_safe %>
+      <%= (I18n.t('cronuts_label_html', cronuts_url: (params['cronuts_url'] || I18n.t('cronuts_url')),
+                  donuts_url: (params['donuts_url'] || I18n.t('donuts_url')),
+                  locale: locale || I18n.default_locale)).html_safe %>
     <% end %>
     <%= check_box_tag 'terms_checkbox' %>
   </div>
