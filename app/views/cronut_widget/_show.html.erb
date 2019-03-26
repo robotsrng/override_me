@@ -1,15 +1,52 @@
-<h2>Cronut acceptance widget</h2>
-<div class="challenge_box">
-  <div class="language-choice-links">
-    <%= link_to 'English', url_for(action: :show, controller: 'cronut_widget', locale: 'en'), id: 'js-english-widget-button', class: 'js-language-button', locale: 'en', remote: true   %>
-    <%= link_to 'French', url_for(action: :show, controller: 'cronut_widget', locale: 'fr'), id: 'js-french-widget-button', class: 'js-language-button', locale: 'fr', remote: true   %>
+<head>
+  <style>
+    body {
+      text-align: center;
+      font-family: "Source Code Pro", Monaco, monospace;
 
-    <%#= button_tag 'French', id: 'js-french-widget-button', class: 'js-language-button', data: {locale: 'fr', url: request.original_url + url_for(action: :show, controller: 'cronut_widget'), remote: true }  %>
+    }
+
+    h2 {
+      text-align: center;
+
+    }
+
+    .language-choice-links {
+      position: absolute;
+      top: 15px;
+      right: 150px;
+      float: right;
+      font-size: 80%;
+    }
+
+    #iFrame-container {
+      margin-left: auto;
+      margin-right: auto;
+      -webkit-border-radius: 5%;
+      -moz-border-radius: 5%;
+      border-radius: 5%;
+      width: 80%;
+      background-color: burlywood;
+      padding: 1rem;
+    }
+
+    #iFrame-container label {
+      width: 80%;
+    }
+  </style>
+
+</head>
+<div id="iFrame-container">
+  <h2><%= I18n.t('cronuts_heading') %></h2>
+  <div class="challenge_box">
+    <div class="language-choice-links">
+      <%= link_to 'English', url_for(action: :show, controller: 'cronut_widget', locale: 'en', cronuts_url: params['cronuts_url'], donuts_url: params['donuts_url']), id: 'js-english-widget-button', class: 'js-language-button', remote: true %>
+      |
+      <%= link_to 'French', url_for(action: :show, controller: 'cronut_widget', locale: 'fr', cronuts_url: params['cronuts_url'], donuts_url: params['donuts_url']), id: 'js-french-widget-button', class: 'js-language-button', remote: true %>
+    </div>
+    <%= label_tag 'terms_checkbox' do %>
+      <%= (I18n.t('cronuts_label_html', cronuts_url: (params['cronuts_url'] || I18n.t('cronuts_url')), donuts_url: (params['donuts_url'] || I18n.t('donuts_url')), locale: locale || I18n.default_locale)).html_safe %>
+    <% end %>
+    <%= check_box_tag 'terms_checkbox' %>
   </div>
-
-  <%= label_tag 'terms_checkbox' do%>
-    <%= (I18n.t('welcome.index.cronuts_label_html', cronuts_url: (params['cronuts_url'] || I18n.t(:cronuts_url)), donuts_url: (params['donuts_url'] || I18n.t(:donuts_url)), locale: locale || I18n.default_locale)).html_safe %>
-  <% end %>
-  <%= check_box_tag 'terms_checkbox' %>
-
 </div>

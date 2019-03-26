@@ -1,4 +1,0 @@
-en:
-  welcome:
-    index:
-      cronuts_label_html: By selecting this checkbox, you agree that <a href="%{cronuts_url}" target="_blank">cronuts</a> are better than <a href="%{donuts_url}" target="_blank">donuts</a>

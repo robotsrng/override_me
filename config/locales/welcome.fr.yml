@@ -1,4 +1,0 @@
-fr:
-  welcome:
-    index:
-      cronuts_label_html: En cochant cette case, vous reconnaissez que les <a href="%{cronuts_url}" target="_blank">cronuts</a> sont meilleurs que les <a href="%{donuts_url}" target="_blank">beignets</a>.

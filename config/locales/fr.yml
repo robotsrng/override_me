@@ -30,10 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 fr:
-  hello: "Bonjour Monde"
-
+  cronuts_heading: Cronuts Widget d'acceptation
   cronuts_label_html: En cochant cette case, vous reconnaissez que les <a href="%{cronuts_url}" target="_blank">cronuts</a> sont meilleurs que les <a href="%{donuts_url}" target="_blank">beignets</a>.
-
-  cronuts_url: "https://upload.wikimedia.org/wikipedia/commons/8/8b/April_2016_Cronut%C2%AE_2_Burnt_Vanilla_Caramel_-_photo_by_Dominique_Ansel_Bakery.jpg"
-
-  donuts_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Glazed-Donut.jpg/250px-Glazed-Donut.jpg"
+  cronuts_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/April_2016_Cronut%C2%AE_2_Burnt_Vanilla_Caramel_-_photo_by_Dominique_Ansel_Bakery.jpg
+  donuts_url: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Glazed-Donut.jpg/250px-Glazed-Donut.jpg
