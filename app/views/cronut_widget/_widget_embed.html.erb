@@ -1,4 +1,4 @@
-<iframe id="widget-iframe" src="<%= url_for(action: :show, controller: 'cronut_widget', locale: 'en',
+<iframe id="widget-iframe" src="<%= url_for(action: :show, controller: 'cronut_widget',  locale: I18n.locale ||I18n.default_locale,
                                             cronuts_url: params['cronuts_url'], donuts_url: params['donuts_url'],
                                             format: :html) %>">
   <p>Placeholder text; only shows up if the page DOESN'T render!</p>

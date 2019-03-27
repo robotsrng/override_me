@@ -51,7 +51,7 @@
     <%= label_tag 'terms_checkbox' do %>
       <%= (I18n.t('cronuts_label_html', cronuts_url: (params['cronuts_url'] || I18n.t('cronuts_url')),
                   donuts_url: (params['donuts_url'] || I18n.t('donuts_url')),
-                  locale: locale || I18n.default_locale)).html_safe %>
+                  locale: I18n.locale ||I18n.default_locale)).html_safe %>
     <% end %>
     <%= check_box_tag 'terms_checkbox' %>
   </div>
